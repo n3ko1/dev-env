@@ -9,3 +9,9 @@ If in VMWare Player:
 ```
 sudo apt install open-vm-tools open-vm-tools-desktop
 ```
+
+Must have:
+tmux
+zsh / oh-my-zsh
+vim
+fzf
