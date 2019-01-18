@@ -34,26 +34,19 @@ sudo cmake --build . --target install
 echo "Installing python dependencies"
 sudo pip install python-language-server
 
+echo "Oh-my-zsh installation"
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
 cd ~
-echo "Downloading and installing configurations"
-git clone https://github.com/n3ko1/vim-rc
-mv ~/vim-rc ~/.vim
+echo "Installing configurations"
+mv .vim ~/.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "When first running vim, run :PlugInstall"
 
-
-git clone https://github.com/n3ko1/tmux-conf
-mv ~/tmux-conf/.tmux.conf ~/.tmux.conf
-mv ~/tmux-conf/.zshrc ~/.zshrc
-rm -r ~/tmux-conf
-
-git clone https://github.com/n3ko1/gdb-dashboard
-mv ~/gdb-dashboard/.gdbinit ~/.gdbinit
-rm -r ~/gdb-dashboard
-
-echo "Oh-my-zsh installation"
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+mv .tmux.conf ~/.tmux.conf
+mv .zshrc ~/.zshrc
+mv .gdbinit ~/.gdbinit
 
 echo "Done."
