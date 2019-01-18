@@ -1,5 +1,5 @@
 echo "Installing dependencies"
-apt-get install zsh git clang llvm-dev cmake python2.7-dev radare2
+apt-get install tmux zsh git clang llvm-dev cmake python2.7-dev python-all-dev python-pip build-essential radare2
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 echo "Building cquery"
@@ -17,7 +17,7 @@ pip install python-language-server
 cd ~
 echo "Downloading and installing configurations"
 git clone https://github.com/n3ko1/vim-rc
-mv vim-rc .vim
+mv ~/vim-rc ~/rad.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
