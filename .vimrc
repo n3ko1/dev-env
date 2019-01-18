@@ -69,7 +69,7 @@ set autoindent
 set cursorline
 set hlsearch
 set is
-nnoremap <esc> :noh<return><esc>
+" nnoremap <esc> :noh<return><esc>
 
 " Enable folding
 set foldmethod=indent
