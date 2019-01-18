@@ -44,8 +44,11 @@ mv .vimrc ~/.vim/.vimrc
 ln -s ~/.vim/.vimrc ~/.vimrc
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-echo "When first running vim, run :PlugInstall"
+vim -c ':PlugInstall|qa!'
+cd ~/.vim/plugged/YouCompleteMe
+./install.py --clang-completer
 
+cd ~/dev-env
 mv .tmux.conf ~/.tmux.conf
 mv .gdbinit ~/.gdbinit
 
