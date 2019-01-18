@@ -6,6 +6,14 @@ set up basic environment on new machine
 
 I try to keep it simple and close to default (except for gdb)
 
+General:
+
+```
+chmod +x install.sh
+./install.sh # act on prompts
+vim .zshrc # edit plugins and theme (see .zshsrc)
+```
+
 If in VMWare Player:
 
 ```
