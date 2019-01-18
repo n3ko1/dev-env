@@ -1,5 +1,5 @@
 echo "Installing dependencies"
-sudo apt-get install tmux zsh git clang llvm-dev cmake python2.7-dev python-all-dev python-pip build-essential radare2
+sudo apt-get install tmux zsh git clang llvm-dev cmake python2.7-dev python-all-dev python-setuptools python-pip build-essential radare2
 
 echo "Building and installing vim"
 sudo apt-get remove vim
@@ -39,14 +39,15 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 cd ~
 echo "Installing configurations"
-mv .vim ~/.vim
+mkdir ~/.vim
+mv .vimrc ~/.vim/.vimrc
 ln -s ~/.vim/.vimrc ~/.vimrc
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "When first running vim, run :PlugInstall"
 
 mv .tmux.conf ~/.tmux.conf
-mv .zshrc ~/.zshrc
 mv .gdbinit ~/.gdbinit
 
 echo "Done."
+echo "Update .zshrc to fit your needs"
