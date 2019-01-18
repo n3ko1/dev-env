@@ -37,10 +37,9 @@ sudo pip install python-language-server
 echo "Oh-my-zsh installation"
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-cd ~
 echo "Installing configurations"
 mkdir ~/.vim
-mv .vimrc ~/.vim/.vimrc
+cp .vimrc ~/.vim/.vimrc
 ln -s ~/.vim/.vimrc ~/.vimrc
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -49,8 +48,8 @@ cd ~/.vim/plugged/YouCompleteMe
 ./install.py --clang-completer
 
 cd ~/dev-env
-mv .tmux.conf ~/.tmux.conf
-mv .gdbinit ~/.gdbinit
+cp .tmux.conf ~/.tmux.conf
+cp .gdbinit ~/.gdbinit
 
 echo "Done."
 echo "Update .zshrc to fit your needs"
