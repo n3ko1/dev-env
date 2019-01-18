@@ -1,5 +1,7 @@
 # .dotfiles
 
+Tested on: Linux Mint 19.1 "Tessa" - Cinnamon (64-bit)
+
 set up basic environment on new machine
 
 I try to keep it simple and close to default (except for gdb)
