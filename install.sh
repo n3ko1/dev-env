@@ -51,5 +51,10 @@ cd ~/dev-env
 cp .tmux.conf ~/.tmux.conf
 cp .gdbinit ~/.gdbinit
 
+echo "Installing metasploit"
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  chmod 755 msfinstall && \
+  ./msfinstall
+
 echo "Done."
 echo "Update .zshrc to fit your needs"
