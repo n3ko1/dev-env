@@ -39,6 +39,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 echo "Installing configurations"
 mkdir ~/.vim
+cd ~/dev-env
 cp .vimrc ~/.vim/.vimrc
 ln -s ~/.vim/.vimrc ~/.vimrc
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
