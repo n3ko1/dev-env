@@ -1,5 +1,5 @@
 echo "Installing dependencies"
-sudo apt-get install tmux zsh git clang llvm-dev cmake python2.7-dev python-all-dev python-setuptools python-pip build-essential radare2
+sudo apt-get install ripgrep tmux zsh git clang llvm-dev cmake python2.7-dev python-all-dev python-setuptools python-pip build-essential radare2
 
 echo "Building and installing vim"
 sudo apt-get remove vim
