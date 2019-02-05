@@ -25,3 +25,8 @@ tmux
 zsh / oh-my-zsh
 vim
 fzf
+
+
+## Things to look into
+
+i3 (https://github.com/i3/i3)
