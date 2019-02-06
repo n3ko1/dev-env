@@ -9,6 +9,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 Plug 'nanotech/jellybeans.vim'
+Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'rhysd/vim-clang-format'
 Plug 'vim-scripts/grep.vim'
 Plug 'nvie/vim-flake8'
@@ -53,11 +54,13 @@ nnoremap <silent> ; :FZF <C-R>=getcwd()<CR><CR>
 " nnoremap <C-g> :YcmCompleter GoToDefinitionElseDeclaration<CR><CR>
 
 " Commands
-command GrepWordUnderCursor :Grepper -query <C-R><C-W><CR><CR>
+command GrepWordUnderCursor :Grepper -tool rg -query <C-R><C-W><CR><CR>
 
 " Appearance
 syntax on
-colorscheme jellybeans
+colorscheme dim
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Black
 set number
 
 set expandtab
@@ -66,7 +69,6 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent
 
-set cursorline
 set hlsearch
 set is
 " nnoremap <esc> :noh<return><esc>
