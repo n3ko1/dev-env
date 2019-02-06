@@ -60,7 +60,7 @@ command GrepWordUnderCursor :Grepper -tool rg -query <C-R><C-W><CR><CR>
 syntax on
 colorscheme dim
 set cursorline
-hi CursorLine cterm=NONE ctermbg=DarkBlue ctermfg=NONE
+hi CursorLine cterm=NONE ctermbg=DarkGrey ctermfg=NONE
 set number
 
 set expandtab
