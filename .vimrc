@@ -31,6 +31,10 @@ let g:ycm_clangd_uses_ycmd_caching = 0
 " Use installed clangd, not YCM-bundled clangd which doesn't get updates.
 let g:ycm_clangd_binary_path = "~/clang+llvm-trunk/build/bin/clangd"
 
+" ClangFormat
+nnoremap <A-F> :ClangFormat<CR>
+
+
 " LanguageServer config
 " CURRENTLY DISABLED, UNCOMMENT TO ENABLE
 "set hidden
