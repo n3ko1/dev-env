@@ -32,7 +32,7 @@ let g:ycm_clangd_uses_ycmd_caching = 0
 let g:ycm_clangd_binary_path = "~/clang+llvm-trunk/build/bin/clangd"
 
 " ClangFormat
-nnoremap <A-F> :ClangFormat<CR>
+nnoremap ^[F :ClangFormat<CR>
 
 
 " LanguageServer config
