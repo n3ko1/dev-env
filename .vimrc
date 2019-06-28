@@ -10,6 +10,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'noahfrederick/vim-noctu'
 Plug 'rhysd/vim-clang-format'
 Plug 'vim-scripts/grep.vim'
 Plug 'nvie/vim-flake8'
@@ -77,7 +78,7 @@ command GrepWordUnderCursor :Rg <C-R><C-W><CR><CR>
 
 " Appearance
 syntax on
-colorscheme dim
+colorscheme noctu
 set cursorline
 hi CursorLine cterm=NONE ctermbg=236 ctermfg=NONE 
 hi SpellBad ctermbg=52
