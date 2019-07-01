@@ -46,6 +46,20 @@ nmap <silent> gr <Plug>(coc-references)
 
 " ClangFormat
 nnoremap F :ClangFormat<CR>
+=======
+" YouCompleteMe config
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+let g:ycm_server_python_interpreter = '/usr/bin/python'
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_goto_buffer_command = 'same-buffer'
+" Let clangd fully control code completion
+let g:ycm_clangd_uses_ycmd_caching = 0
+" Use installed clangd, not YCM-bundled clangd which doesn't get updates.
+let g:ycm_clangd_binary_path = "~/clang+llvm-trunk/build/bin/clangd"
+
+" ClangFormat
+nnoremap ^[F :ClangFormat<CR>
 
 " fix lightline issue with single window
 set laststatus=2
